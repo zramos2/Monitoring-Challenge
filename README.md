@@ -55,7 +55,7 @@ This challenge is to demonstrate monitoring of AWS microservices using Prometheu
     - **Prom2** has 681MB of memory that is free.
 <img width="578" alt="Screen Shot 2020-07-28 at 9 57 47 PM" src="https://user-images.githubusercontent.com/36197897/88751530-665f4d80-d11d-11ea-82e9-91baf936a875.png">
 
-    - **Prom3** has 682MB of memory that is free.
+   - **Prom3** has 682MB of memory that is free.
   <img width="578" alt="Screen Shot 2020-07-28 at 9 59 35 PM" src="https://user-images.githubusercontent.com/36197897/88751670-afaf9d00-d11d-11ea-8f68-ec611148ade8.png">
 
 2. Now use the `stress` command.
