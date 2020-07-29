@@ -1,5 +1,5 @@
 # Monitoring-Challenge
-This challenge is to demonstrate monitoring using cloud micro services. 
+This challenge is to demonstrate monitoring of AWS microservices using Prometheus and Grafana.
 
 ## Objectives
 - The goal is to set up a monitoring stack to **capture data points from 2 live EC2 instances.**
