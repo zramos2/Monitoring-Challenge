@@ -101,5 +101,8 @@ This challenge is to demonstrate monitoring of AWS microservices using Prometheu
 - We have now finished the challenge and completed the desired objectives for this project! 
 
 ## Where I had trouble in the Monitoring Challenge and what I did to fix it.  
-The main problem I had was setting up `node_exporter` on my 2 EC2 instances, and having Prometheus scrape them.  
-      
+- The main problem I had was setting up `node_exporter` on my 2 EC2 instances, and having Prometheus scrape them.  I knew I had to install `node_exporter` on each of my instances, but I could not get it running in Prometheus.  
+- The error I kept getting was `connection refused`.
+<img width="1395" alt="Screen Shot 2020-07-28 at 11 57 04 PM" src="https://user-images.githubusercontent.com/36197897/88758425-0cb34f00-d12e-11ea-941c-fdbe19eb362d.png">
+
+- In order to fix this error, I realized I had to have the instances running `node_exporter` while **Prom1** was running Prometheus. 
