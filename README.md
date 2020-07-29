@@ -21,7 +21,21 @@ This challenge is to demonstrate monitoring using cloud micro services.
 - Then I have a IAM user to attach to Prometheus with an `AmazonEC2ReadOnlyAccess` policy
 
 ## Prometheus Configuration
+
 - My `prometheus.yml` file
 <img width="707" alt="Screen Shot 2020-07-28 at 9 02 18 PM" src="https://user-images.githubusercontent.com/36197897/88748038-b0dccc00-d115-11ea-8fc6-664d1c5b4f49.png">
-`ec2sdconfigs` is used as a Prometheus service discovery option.
+
+- `ec2_sd_configs` is used as a Promethues service discovery option.
   - Prometheus has tons of different service discovery options for discoviering scrape targets, which in this case is an EC2 instance.
+- `relabel_configs` is used so that the instance name **Prom1, Prom2, Prom3** shows up rather than their IP addresses in Prometheus and Grafana.
+
+## Grafana Configuration
+
+- I borrowed Grafana dashboards from the Grafana community and used `1860` and `405` dashboards. 
+  - These dashboards were specifically made for `node_exporter` 
+  - https://grafana.com/grafana/dashboards/1860
+  - https://grafana.com/grafana/dashboards/405
+  
+## Simulation on monitored instances
+
+- Now that Prometheus and Grafana are set up time to monitor the **Prom2** and **Prom3** instances!
