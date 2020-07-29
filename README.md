@@ -46,9 +46,9 @@ This challenge is to demonstrate monitoring using cloud micro services.
   - I used the `stress` tool to put strain on the memory.  
     - If you're curious on how to install the `stress` tool on an EC2 image:
       1. The t2.micro AMI is based on RHEL/CentOS.  So before you can install `stress`, you have to install `EPEL`
-        - `sudo amazon-linux-extras install epel`
+          - `sudo amazon-linux-extras install epel`
       2. Now you can install the `stress` tool.
-        - `sudo yum install stress`
+          - `sudo yum install stress`
         
         
 1. Check how much free memory you have with the `free -h` command.  
