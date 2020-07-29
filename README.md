@@ -38,4 +38,43 @@ This challenge is to demonstrate monitoring using cloud micro services.
   
 ## Simulation on monitored instances
 
-- Now that Prometheus and Grafana are set up time to monitor the **Prom2** and **Prom3** instances!
+- Now that Prometheus and Grafana are set up, it's time to test and monitor the **Prom2** and **Prom3** instances!
+
+#### High Memory Usage
+- First I'll demonstrate high **memory** usage.
+  - NOTE: because I'm putting strain on the **memory** this will also put strain on the **CPU.**
+  - I used the `stress` tool to put strain on the memory.  
+    - If you're curious on how to install the `stress` tool on an EC2 image:
+      1. The t2.micro AMI is based on RHEL/CentOS.  So before you can install `stress`, you have to install `EPEL`
+        - `sudo amazon-linux-extras install epel`
+      2. Now you can install the `stress` tool.
+        - `sudo yum install stress`
+        
+        
+1. Check how much free memory you have with the `free -h` command.  
+    - **Prom2** has 681MB of memory that is free.
+<img width="578" alt="Screen Shot 2020-07-28 at 9 57 47 PM" src="https://user-images.githubusercontent.com/36197897/88751530-665f4d80-d11d-11ea-82e9-91baf936a875.png">
+
+    - **Prom3** has 682MB of memory that is free.
+  <img width="578" alt="Screen Shot 2020-07-28 at 9 59 35 PM" src="https://user-images.githubusercontent.com/36197897/88751670-afaf9d00-d11d-11ea-8f68-ec611148ade8.png">
+
+2. Now use the `stress` command.
+    - `stress --vm 1 --vm-bytes 500M --timeout 60`
+    - `vm` represents how much GB of total memory the system has. In our case, **Prom2** and **Prom3** has 983 MB total memory. 
+    - `vm-bytes` represents how much memory you want to fill. In this case, we want to fill 500MB of memory.
+    - `timeout` represents how long the `stress` command lasts in seconds.  In this case, it lasts for 60 seconds.  
+  <img width="1350" alt="Screen Shot 2020-07-28 at 10 06 25 PM" src="https://user-images.githubusercontent.com/36197897/88752083-a5da6980-d11e-11ea-9895-22c3e92ebb10.png">
+
+  - Viola! We simulated high memory usage.
+  
+#### High CPU Usage
+- To demonstrate high CPU usage, we'll use the `stress` tool again.  
+  
+1. Check how much CPU your instance has.
+    - t2.micro EC2 instances have only 1 CPU, but if you want to check how much CPU your instances has you can use `lscpu` command.
+    
+2. Now use the `stress` command.
+    - `stress --cpu 1 --timeout 120`
+    - `cpu` represents how much CPU your instance has
+    - Our `timeout`, in this case, lasts for 120 seconds.
+    
