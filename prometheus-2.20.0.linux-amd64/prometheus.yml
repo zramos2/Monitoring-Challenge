@@ -12,8 +12,8 @@ scrape_configs:
     ec2_sd_configs:
     - region: us-east-2
       profile: arn:aws:iam::067822155174:role/PrometheusRole
-      #access_key: AKIAQ7SUD6WTL7IJZQNG
-      #secret_key: VXG7WBZ16FGdPur7jDBJYkNnKbNIRyUCl6nakxgx
+      access_key: YOUR_ACCESS_KEY
+      secret_key: YOUR_SECRET_KEY
       port: 9100 
     relabel_configs:
     - source_labels: [__meta_ec2_tag_Name]
