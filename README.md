@@ -60,12 +60,12 @@ This challenge is to demonstrate monitoring using cloud micro services.
 
 2. Now use the `stress` command.
     - `stress --vm 1 --vm-bytes 500M --timeout 60`
-    - `vm` represents how much GB of total memory the system has. In our case, **Prom2** and **Prom3** has 983 MB total memory. 
-    - `vm-bytes` represents how much memory you want to fill. In this case, we want to fill 500MB of memory.
-    - `timeout` represents how long the `stress` command lasts in seconds.  In this case, it lasts for 60 seconds.  
+    - `--vm` represents how much GB of total memory the system has. In our case, **Prom2** and **Prom3** has 983 MB total memory. 
+    - `--vm-bytes` represents how much memory you want to fill. In this case, we want to fill 500MB of memory.
+    - `--timeout` represents how long the `stress` command lasts in seconds.  In this case, it lasts for 60 seconds.  
   <img width="1350" alt="Screen Shot 2020-07-28 at 10 06 25 PM" src="https://user-images.githubusercontent.com/36197897/88752083-a5da6980-d11e-11ea-9895-22c3e92ebb10.png">
 
-  - Viola! We simulated high memory usage.
+  - Viola! Prometheus recognized our memory usage and Grafana was able to visualize it.
   
 #### High CPU Usage
 - To demonstrate high CPU usage, we'll use the `stress` tool again.  
@@ -75,6 +75,9 @@ This challenge is to demonstrate monitoring using cloud micro services.
     
 2. Now use the `stress` command.
     - `stress --cpu 1 --timeout 120`
-    - `cpu` represents how much CPU your instance has
+    - `--cpu` represents how much CPU your instance has
     - Our `timeout`, in this case, lasts for 120 seconds.
-    
+  - Here is our Grafana graph for our CPU stress test.
+<img width="1351" alt="Screen Shot 2020-07-28 at 10 24 42 PM" src="https://user-images.githubusercontent.com/36197897/88753161-28fcbf00-d121-11ea-8a44-6107cbf13eef.png">
+
+#### High Disk Space
