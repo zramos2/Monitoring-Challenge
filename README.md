@@ -81,3 +81,18 @@ This challenge is to demonstrate monitoring using cloud micro services.
 <img width="1351" alt="Screen Shot 2020-07-28 at 10 24 42 PM" src="https://user-images.githubusercontent.com/36197897/88753161-28fcbf00-d121-11ea-8a44-6107cbf13eef.png">
 
 #### High Disk Space
+- Lastly, we'll demonstrate filling up our disk space.
+
+1. Check how much disk space your instance has.
+    - You can use the `df -h` command to check your disk space.
+  - The biggest amount of disk space availbe on **Prom2** in 6.4 G.
+<img width="376" alt="Screen Shot 2020-07-28 at 10 30 22 PM" src="https://user-images.githubusercontent.com/36197897/88753535-061eda80-d122-11ea-8f2d-2d38b89f7591.png">
+
+  - The biggest amount of disk space availbe on **Prom2** in 6.5 G.
+<img width="397" alt="Screen Shot 2020-07-28 at 10 33 38 PM" src="https://user-images.githubusercontent.com/36197897/88753682-70d01600-d122-11ea-9fd2-1357babc26ad.png">
+
+2. To simulate filling up our disk space, we can create a big file.  
+    - You can use `fallocate -l 5G file1`
+      - This will create a file called `file` that takes of 5G of disk space.
+      
+      
