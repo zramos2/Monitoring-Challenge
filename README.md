@@ -100,6 +100,6 @@ This challenge is to demonstrate monitoring of AWS microservices using Prometheu
 - Notice how the disk space used drops down because I deleted the file. 
 - We have now finished the challenge and completed the desired objectives for this project! 
 
-## Conclusion
-### Where I had trouble in the challenge and what I did to fix it.  
+## Where I had trouble in the Monitoring Challenge and what I did to fix it.  
+The main problem I had was setting up `node_exporter` on my 2 EC2 instances, and having Prometheus scrape them.  
       
