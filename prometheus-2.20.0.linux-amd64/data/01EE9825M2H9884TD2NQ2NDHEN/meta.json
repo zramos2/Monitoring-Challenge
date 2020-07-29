@@ -1,0 +1,17 @@
+{
+	"ulid": "01EE9825M2H9884TD2NQ2NDHEN",
+	"minTime": 1595880000000,
+	"maxTime": 1595887200000,
+	"stats": {
+		"numSamples": 25354,
+		"numSeries": 1811,
+		"numChunks": 1811
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01EE9825M2H9884TD2NQ2NDHEN"
+		]
+	},
+	"version": 1
+}

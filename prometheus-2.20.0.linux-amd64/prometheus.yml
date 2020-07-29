@@ -1,0 +1,20 @@
+# my global config
+global:
+  scrape_interval:     1s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 1s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  # scrape_timeout is set to the global default (10s).
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+    - targets: ['localhost:9090']
+  - job_name: 'ec2-nodes'
+    ec2_sd_configs:
+    - region: us-east-2
+      profile: arn:aws:iam::067822155174:role/PrometheusRole
+      #access_key: AKIAQ7SUD6WTL7IJZQNG
+      #secret_key: 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
+      port: 9100 
+    relabel_configs:
+    - source_labels: [__meta_ec2_tag_Name]
+      target_label: instance
