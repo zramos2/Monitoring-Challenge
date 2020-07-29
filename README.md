@@ -88,11 +88,18 @@ This challenge is to demonstrate monitoring using cloud micro services.
   - The biggest amount of disk space availbe on **Prom2** in 6.4 G.
 <img width="376" alt="Screen Shot 2020-07-28 at 10 30 22 PM" src="https://user-images.githubusercontent.com/36197897/88753535-061eda80-d122-11ea-8f2d-2d38b89f7591.png">
 
-  - The biggest amount of disk space availbe on **Prom2** in 6.5 G.
+  - The biggest amount of disk space availbe on **Prom3** in 6.5 G.
 <img width="397" alt="Screen Shot 2020-07-28 at 10 33 38 PM" src="https://user-images.githubusercontent.com/36197897/88753682-70d01600-d122-11ea-9fd2-1357babc26ad.png">
 
 2. To simulate filling up our disk space, we can create a big file.  
     - You can use `fallocate -l 5G file1`
       - This will create a file called `file` that takes of 5G of disk space.
-      
+    - If you want to delete the file, you can type `rm file1`.
+<img width="1352" alt="Screen Shot 2020-07-28 at 10 44 36 PM" src="https://user-images.githubusercontent.com/36197897/88754297-ee485600-d123-11ea-8d66-b25d926c75ba.png">
+
+- Notice how the disk space used drops down because I deleted the file. 
+- We have now finished the challenge and completed the desired objectives for this project! 
+
+## Conclusion
+### Where I had trouble in the challenge and what I did to fix it.  
       
