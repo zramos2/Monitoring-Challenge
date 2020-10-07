@@ -2,13 +2,13 @@
 This challenge is to demonstrate monitoring of AWS microservices using Prometheus and Grafana.
 
 ### 1. Configurations
-- EC2 Configuration
-- Prometheus Configuration
-- Grafana Configuration
+  - EC2 Configuration
+  - Prometheus Configuration
+  - Grafana Configuration
 ### 2. Simulation on monitored instances
-- High Memory Usage
-- High CPU Usage
-- High Disk Space
+  - High Memory Usage
+  - High CPU Usage
+  - High Disk Space
 
 ## Objectives
 - The goal is to set up a monitoring stack to **capture data points from 2 live EC2 instances.**
