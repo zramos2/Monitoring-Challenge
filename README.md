@@ -1,3 +1,14 @@
+1. Monitoring-Challenge
+2. Objectives
+3. Configurations
+- EC2 Configuration
+- Prometheus Configuration
+- Grafana Configuration
+6. Simulation on monitored instances
+- High Memory Usage
+- High CPU Usage
+- High Disk Space
+
 # Monitoring-Challenge
 This challenge is to demonstrate monitoring of AWS microservices using Prometheus and Grafana.
 
